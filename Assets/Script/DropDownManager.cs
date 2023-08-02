@@ -13,6 +13,7 @@ public class DropDownManager : MonoBehaviour
     void Start()
     {
         if (dropdownMonth) {
+            //Debug.Log(dropdownMonth);
             dropdownMonth.ClearOptions(); //現在の要素をクリアする
 
             List<string> monthList = new List<string>();
@@ -50,11 +51,6 @@ public class DropDownManager : MonoBehaviour
             dropdownDay.AddOptions(dayList);
             dropdownDay.value = 0;
         }
-        
-    }
-
-    void Update()
-    {
         
     }
 }

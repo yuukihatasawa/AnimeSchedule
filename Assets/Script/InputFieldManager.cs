@@ -8,13 +8,13 @@ public class InputFieldManager : MonoBehaviour
     [SerializeField] private InputField animeTitleInputField;
     [SerializeField] private Text animeTitleText;
 
-    void Start()
+    private void Start()
     {
         animeTitleInputField = animeTitleInputField.GetComponent<InputField>();
         animeTitleText = animeTitleText.GetComponent<Text>();
     }
 
-    void Update()
+    private void Update()
     {
         
     }

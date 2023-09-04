@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine;
 
-public class SaveData : MonoBehaviour
+public class SaveDataManager : MonoBehaviour
 {
     [SerializeField] private Dropdown dropdownMonth;
     [SerializeField] private Dropdown dropdownDay;
@@ -13,7 +13,10 @@ public class SaveData : MonoBehaviour
     [SerializeField] private Text animeText;
 
     List<string> jsonDataList = new List<string>();
+    private string jsonDataPass = "Assets/Resources/AnimeData.json";
+
     private string jsonString;
+    private bool firstFlag = true;
     
 
 
@@ -40,24 +43,34 @@ public class SaveData : MonoBehaviour
     //追加ボタンを押下したら、JSONデータ形式でコンソール上に表示される
     public void OnClick()
     {
-        Save();
-    }
-
-    private void Save()
-    {
         saveDataJson.month = dropdownMonth.options[dropdownMonth.value].text;
         saveDataJson.day = dropdownDay.options[dropdownDay.value].text;
         saveDataJson.animeTitle = animeTitleInputField.text;
-        jsonString = JsonUtility.ToJson(saveDataJson);
-        File.WriteAllText($"Assets/Resources/AnimeData.json", jsonString);
-        Debug.Log("1" + jsonString);
-        jsonDataList.Add(jsonString);
-
-        foreach (var json in jsonDataList)
+        if (firstFlag)
         {
-            Debug.Log("セーブしたよ" + json);
-            animeText.text = json;
+            Debug.Log("1、作成");
+            CreateJsonFile();
+            firstFlag = false;
         }
+        else
+        {
+            Debug.Log("2、追記");
+            AppendToJsonFile();
+        }
+    }
+
+    private void CreateJsonFile()
+    {
+        jsonString = JsonUtility.ToJson(saveDataJson , true);
+        File.WriteAllText(jsonDataPass, jsonString);
+    }
+
+    private void AppendToJsonFile()
+    {
+        jsonString = JsonUtility.ToJson(saveDataJson, true);
+        Debug.Log("追記したよ" + jsonString);
+        File.AppendAllText(jsonDataPass , jsonString);
+        animeText.text = jsonString;
     }
 
     private void Load()

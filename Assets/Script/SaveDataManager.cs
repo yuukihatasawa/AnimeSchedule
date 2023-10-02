@@ -12,15 +12,12 @@ public class SaveDataManager : MonoBehaviour
     [SerializeField] private InputField animeTitleInputField;
     [SerializeField] private Text animeText;
 
-    List<string> jsonDataList = new List<string>();
     private string jsonDataPass = "Assets/Resources/AnimeData.json";
-
     private string jsonString;
-    private bool firstFlag = true;
-    
 
-
-    //「JsonUtility」を使用して構造体をJson形式にシリアライズする
+    /// <summary>
+    /// 「JsonUtility」を使用して構造体をJson形式にシリアライズする
+    /// </summary>
     [System.Serializable]
     public class SaveDataJson
     {
@@ -29,7 +26,9 @@ public class SaveDataManager : MonoBehaviour
         public string animeTitle;
     }
 
-    //構造体を初期化
+    /// <summary>
+    /// 構造体を初期化
+    /// </summary>
     public SaveDataJson saveDataJson = new SaveDataJson();
 
     private void Start()
@@ -40,45 +39,38 @@ public class SaveDataManager : MonoBehaviour
         animeText = animeText.GetComponent<Text>();
     }
 
-    //追加ボタンを押下したら、JSONデータ形式でコンソール上に表示される
-    public void OnClick()
+    /// <summary>
+    /// JSONファイルに最初に書き込む
+    /// </summary>
+    public void CreateJsonFile()
     {
         saveDataJson.month = dropdownMonth.options[dropdownMonth.value].text;
         saveDataJson.day = dropdownDay.options[dropdownDay.value].text;
         saveDataJson.animeTitle = animeTitleInputField.text;
-        if (firstFlag)
-        {
-            Debug.Log("1、作成");
-            CreateJsonFile();
-            firstFlag = false;
-        }
-        else
-        {
-            Debug.Log("2、追記");
-            AppendToJsonFile();
-        }
-    }
-
-    private void CreateJsonFile()
-    {
         jsonString = JsonUtility.ToJson(saveDataJson , true);
         File.WriteAllText(jsonDataPass, jsonString);
     }
 
-    private void AppendToJsonFile()
+    /// <summary>
+    /// JSONファイルに追記で書き込む
+    /// </summary>
+    public void AppendToJsonFile()
     {
+        saveDataJson.month = dropdownMonth.options[dropdownMonth.value].text;
+        saveDataJson.day = dropdownDay.options[dropdownDay.value].text;
+        saveDataJson.animeTitle = animeTitleInputField.text;
         jsonString = JsonUtility.ToJson(saveDataJson, true);
         Debug.Log("追記したよ" + jsonString);
         File.AppendAllText(jsonDataPass , jsonString);
         animeText.text = jsonString;
     }
 
-    private void Load()
-    {
-        TextAsset jsonLoad = Resources.Load<TextAsset>("AnimeData");
-        SaveDataJson animeData = JsonUtility.FromJson<SaveDataJson>(jsonLoad.text);
-        Debug.Log("ロードしたよ！！");
-    }
+    //public void Load()
+    //{
+    //    TextAsset jsonLoad = Resources.Load<TextAsset>("AnimeData");
+    //    SaveDataJson animeData = JsonUtility.FromJson<SaveDataJson>(jsonLoad.text);
+    //    Debug.Log("ロードしたよ！！");
+    //}
 }
 
 

@@ -370,10 +370,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1600806788}
         m_TargetAssemblyTypeName: ScreenTransition, Assembly-CSharp
         m_MethodName: OnClick
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 311862359}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -504,10 +504,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1600806788}
         m_TargetAssemblyTypeName: ScreenTransition, Assembly-CSharp
         m_MethodName: OnClick
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 314633799}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -718,10 +718,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1600806788}
         m_TargetAssemblyTypeName: ScreenTransition, Assembly-CSharp
         m_MethodName: OnClick
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 463635585}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -932,10 +932,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1600806788}
         m_TargetAssemblyTypeName: ScreenTransition, Assembly-CSharp
         m_MethodName: OnClick
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 589429286}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1066,10 +1066,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1600806788}
         m_TargetAssemblyTypeName: ScreenTransition, Assembly-CSharp
         m_MethodName: OnClick
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 674460959}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1284,10 +1284,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1600806788}
         m_TargetAssemblyTypeName: ScreenTransition, Assembly-CSharp
         m_MethodName: OnClick
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1059711029}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1418,10 +1418,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1600806788}
         m_TargetAssemblyTypeName: ScreenTransition, Assembly-CSharp
         m_MethodName: OnClick
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1061848934}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1552,10 +1552,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1600806788}
         m_TargetAssemblyTypeName: ScreenTransition, Assembly-CSharp
         m_MethodName: OnClick
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1083189475}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1919,10 +1919,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1600806788}
         m_TargetAssemblyTypeName: ScreenTransition, Assembly-CSharp
         m_MethodName: OnClick
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1426134835}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2213,10 +2213,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1600806788}
         m_TargetAssemblyTypeName: ScreenTransition, Assembly-CSharp
         m_MethodName: OnClick
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1533387814}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2459,10 +2459,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1600806788}
         m_TargetAssemblyTypeName: ScreenTransition, Assembly-CSharp
         m_MethodName: OnClick
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1603985313}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2833,10 +2833,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1600806788}
         m_TargetAssemblyTypeName: ScreenTransition, Assembly-CSharp
         m_MethodName: OnClick
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1723608385}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

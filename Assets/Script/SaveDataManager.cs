@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class SaveDataManager : MonoBehaviour
 {
-    [SerializeField] private Dropdown dropdownMonth;
+    [SerializeField] private InputField inputFieldMonth;
     [SerializeField] private Dropdown dropdownDay;
     [SerializeField] private InputField animeTitleInputField;
     [SerializeField] private Text animeText;
@@ -33,7 +33,7 @@ public class SaveDataManager : MonoBehaviour
 
     private void Start()
     {
-        dropdownMonth = dropdownMonth.GetComponent<Dropdown>();
+        inputFieldMonth = inputFieldMonth.GetComponent<InputField>();
         dropdownDay = dropdownDay.GetComponent<Dropdown>();
         animeTitleInputField = animeTitleInputField.GetComponent<InputField>();
         animeText = animeText.GetComponent<Text>();
@@ -44,11 +44,13 @@ public class SaveDataManager : MonoBehaviour
     /// </summary>
     public void CreateJsonFile()
     {
-        saveDataJson.month = dropdownMonth.options[dropdownMonth.value].text;
+        saveDataJson.month = inputFieldMonth.text;
         saveDataJson.day = dropdownDay.options[dropdownDay.value].text;
         saveDataJson.animeTitle = animeTitleInputField.text;
         jsonString = JsonUtility.ToJson(saveDataJson , true);
         File.WriteAllText(jsonDataPass, jsonString);
+        SaveDataJson fromJson = JsonUtility.FromJson<SaveDataJson>(jsonString);
+        Debug.Log($"Month : {fromJson.month}");
     }
 
     /// <summary>
@@ -56,7 +58,7 @@ public class SaveDataManager : MonoBehaviour
     /// </summary>
     public void AppendToJsonFile()
     {
-        saveDataJson.month = dropdownMonth.options[dropdownMonth.value].text;
+        saveDataJson.month = inputFieldMonth.text;
         saveDataJson.day = dropdownDay.options[dropdownDay.value].text;
         saveDataJson.animeTitle = animeTitleInputField.text;
         jsonString = JsonUtility.ToJson(saveDataJson, true);

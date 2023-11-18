@@ -30,4 +30,8 @@ public class ScreenTransition : MonoBehaviour
         SceneManager.LoadScene("VerboseScreenScene");
     }
 
+    public void BackOnClick()
+    {
+        SceneManager.LoadScene("TitleScene");
+    }
 }

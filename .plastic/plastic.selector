@@ -1,0 +1,4 @@
+repository "AnimeSchedule@hata33@cloud"
+  path "/"
+    br "/main"
+    co "/main"
